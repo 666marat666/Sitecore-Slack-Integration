@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SitecoreSlackIntegration.Events
+namespace SitecoreSlackIntegration.Events.Publish
 {
     public class PublishBeginEvent
     {
@@ -24,11 +24,11 @@ namespace SitecoreSlackIntegration.Events
             if (pOptions.RootItem == null)
             {
                 rootItemPath = "null";
-                rootItemName = "null";
+                rootItemName = "null";                
             }
             else
             {
-                rootItemPath = pOptions.RootItem.Uri.Path;
+                rootItemPath = rootItemPath = pOptions.RootItem.Paths.ContentPath;
                 rootItemName = pOptions.RootItem.Name;
             }
 

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SitecoreSlackIntegration.Events
+namespace SitecoreSlackIntegration.Events.Publish
 {
     public class PublishEndEvent
     {
@@ -28,7 +28,7 @@ namespace SitecoreSlackIntegration.Events
             }
             else
             {
-                rootItemPath = pOptions.RootItem.Uri.Path;
+                rootItemPath = rootItemPath = pOptions.RootItem.Paths.ContentPath;
                 rootItemName = pOptions.RootItem.Name;
             }
 

@@ -13,7 +13,7 @@ namespace SitecoreSlackIntegration.Core.Base
 
         SlackClient client = null;
         string instanceName = null;
-        string channelName = null;
+        string channelName = null;        
         
         public static IntegrationManager instance
         {
@@ -27,7 +27,7 @@ namespace SitecoreSlackIntegration.Core.Base
                         return integrationManager;
                     }
                     else
-                    {
+                    {                        
                         return integrationManager;
                     }
                 }

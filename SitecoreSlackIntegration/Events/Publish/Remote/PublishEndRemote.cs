@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SitecoreSlackIntegration.Events.Remote
+namespace SitecoreSlackIntegration.Events.Publish.Remote
 {
     public class PublishEndRemote
     {

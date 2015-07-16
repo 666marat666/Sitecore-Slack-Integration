@@ -61,8 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Base\IntegrationManager.cs" />
-    <Compile Include="Events\PublishBeginEvent.cs" />
-    <Compile Include="Events\PublishEndEvent.cs" />
+    <Compile Include="Events\Publish\PublishBeginEvent.cs" />
+    <Compile Include="Events\Publish\PublishEndEvent.cs" />
+    <Compile Include="Events\Publish\PublishFailEvent.cs" />
+    <Compile Include="Events\Publish\Remote\PublishEndRemote.cs" />
     <Compile Include="Extensions\PublishEventsExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
