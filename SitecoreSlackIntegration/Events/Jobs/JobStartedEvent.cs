@@ -28,7 +28,7 @@ namespace SitecoreSlackIntegration.Events.Jobs
 
                 IntegrationManager.instance.PostPlainTextMessageIntoChannel(
                     String.Format(
-                    "*[Job started]* \nName: {0} [{1}] \nCategory: {2} \nSite name: {3} \nPipeline name: {4} \nContext item: {5}",
+                    "*[Job started]* ```\nName: {0} [{1}] \nCategory: {2} \nSite name: {3} \nPipeline name: {4} \nContext item: {5}```",
                     jobEvent.Job.Name,//0
                     jobEvent.Job.Options.JobName,//1
                     jobEvent.Job.Category,//2

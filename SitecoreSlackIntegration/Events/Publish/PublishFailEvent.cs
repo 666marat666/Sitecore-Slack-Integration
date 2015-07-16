@@ -31,7 +31,7 @@ namespace SitecoreSlackIntegration.Events.Publish
 
             IntegrationManager.instance.PostPlainTextMessageIntoChannel(
                 String.Format(
-                "*[Publish fail]* \nMessage: {0} \nException stack: {1} \nRoot item: {2} [{3}]",
+                "*[Publish fail]* ```\nMessage: {0} \nException stack: {1} \nRoot item: {2} [{3}]```",
                 ex.Message,
                 ex.StackTrace,
                 rootItemName,

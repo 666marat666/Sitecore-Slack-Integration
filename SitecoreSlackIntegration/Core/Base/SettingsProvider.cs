@@ -30,7 +30,7 @@ namespace SitecoreSlackIntegration.Core.Base
         public List<string> GetFilteredJobs()
         { 
             List<string> result = new List<string>();
-            string filteredJobs = Sitecore.Configuration.Settings.GetSetting("Slack.FilteredJobs", "UnlockContactListsAgent|Index_Update_IndexName");
+            string filteredJobs = Sitecore.Configuration.Settings.GetSetting("Slack.FilteredJobs", "UnlockContactListsAgent|Index_Update_IndexName|UpdateIndex_");
             result = filteredJobs.Split('|').ToList();
             return result;
         }
