@@ -19,7 +19,7 @@ namespace SitecoreSlackIntegration.Core.Base
         {
             get
             {
-                lock (lockObject)
+                lock (lockObject)//because may be reuqested from different publishing threads
                 {
                     if (integrationManager == null)
                     {

@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Base\IntegrationManager.cs" />
+    <Compile Include="Events\Jobs\JobStartedEvent.cs" />
     <Compile Include="Events\Publish\PublishBeginEvent.cs" />
     <Compile Include="Events\Publish\PublishEndEvent.cs" />
     <Compile Include="Events\Publish\PublishFailEvent.cs" />
