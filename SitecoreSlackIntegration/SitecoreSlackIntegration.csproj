@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Base\IntegrationManager.cs" />
+    <Compile Include="Core\Base\SettingsProvider.cs" />
+    <Compile Include="Events\Jobs\JobEndedEvent.cs" />
     <Compile Include="Events\Jobs\JobStartedEvent.cs" />
     <Compile Include="Events\Publish\PublishBeginEvent.cs" />
     <Compile Include="Events\Publish\PublishEndEvent.cs" />

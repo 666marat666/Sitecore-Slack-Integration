@@ -39,8 +39,8 @@ namespace SitecoreSlackIntegration.Core.Base
             client = new SlackClient(
                     Sitecore.Configuration.Settings.GetSetting("Slack.WebHook.URL", "https://hooks.slack.com/services/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") //TODO: hardcoded url
                 );
-            instanceName = Sitecore.Configuration.Settings.GetSetting("Slack.WebHook.InstanceName", "Sitecore");
-            channelName =  Sitecore.Configuration.Settings.GetSetting("Slack.WebHook.ChannelName", "#general");
+            instanceName = Sitecore.Configuration.Settings.GetSetting("Slack.InstanceName", "Sitecore");
+            channelName =  Sitecore.Configuration.Settings.GetSetting("Slack.ChannelName", "#general");
         }
 
         public bool PostPlainTextMessageIntoChannel(string messageText)

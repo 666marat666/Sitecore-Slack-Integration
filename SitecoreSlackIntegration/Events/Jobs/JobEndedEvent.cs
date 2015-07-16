@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace SitecoreSlackIntegration.Events.Jobs
 {
-    public class JobStartedEvent
+    public class JobEndedEvent
     {
         public void Execute(object sender, EventArgs args)
         {
             Assert.ArgumentNotNull(sender, "sender");
             Assert.ArgumentNotNull(args, "args");
-            JobStartedEventArgs jobEvent = (Event.ExtractParameter(args, 0) as JobStartedEventArgs);
+            JobFinishedEventArgs jobEvent = (Event.ExtractParameter(args, 0) as JobFinishedEventArgs);
             if(!SettingsProvider.instance.GetFilteredJobs().Any(x => jobEvent.Job.Name.Contains(x)))
             {
                 string itemPath = "null";
@@ -28,7 +28,7 @@ namespace SitecoreSlackIntegration.Events.Jobs
 
                 IntegrationManager.instance.PostPlainTextMessageIntoChannel(
                     String.Format(
-                    "*[Job started]* \nName: {0} [{1}] \nCategory: {2} \nSite name: {3} \nPipeline name: {4} \nContext item: {5}",
+                    "*[Job ended]* \nName: {0} [{1}] \nCategory: {2} \nSite name: {3} \nPipeline name: {4} \nContext item: {5}",
                     jobEvent.Job.Name,//0
                     jobEvent.Job.Options.JobName,//1
                     jobEvent.Job.Category,//2
